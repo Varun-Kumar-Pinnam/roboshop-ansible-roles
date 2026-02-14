@@ -1,5 +1,0 @@
-- name: test
-  hosts: local
-  connection: local
-  roles:
-    - mongodb
