@@ -1,5 +1,14 @@
+# - name: "configure {{ component }} server"
+#   hosts: "{{ component }}"
+#   become: yes
+#   roles:
+#   - "{{ component }}"
+
 - name: "configure {{ component }} server"
   hosts: "{{ component }}"
   become: yes
-  roles:
-  - "{{ component }}"
+  tasks:
+    name: configure components
+  inculde_roles:
+    name: "{{ item }}"
+  loop: "{{ component }}"
