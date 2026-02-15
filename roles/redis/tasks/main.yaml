@@ -1,4 +1,4 @@
-- name: "{{ component setup }}"
+- name: "{{ component }} setup"
   ansible.builtin.import_role:
     name: common
     tasks_from: redis_setup.yaml
@@ -9,7 +9,7 @@
     path: /etc/redis/redis.conf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
-    
+
 - name: Replace a localhost entry with our own
   ansible.builtin.lineinfile:
     path: /etc/redis/redis.conf
@@ -17,8 +17,8 @@
     line: protected-mode no
     backrefs: yes
 
-- name: start {{ component setup }}
+- name: start {{ component }} setup
   ansible.builtin.service:
-    name: "{{ component setup }}""
+    name: "{{ component }} setup"
     state: restarted
     enabled: yes
