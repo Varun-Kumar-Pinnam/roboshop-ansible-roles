@@ -9,6 +9,6 @@
   become: yes
   tasks:
     name: configure components
-  inculde_role:
+  include_role:
     name: "{{ item }}"
   loop: "{{ component }}"
