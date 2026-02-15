@@ -1,9 +1,9 @@
-   - name: copy rabbitmq repo file
+   - name: copy {{ component }} repo file
      ansible.builtin.copy:
       src: rabbitmq.repo
       dest: /etc/yum.repos.d/rabbitmq.repo
    
-   - name: Installing rabbitmq
+   - name: Installing {{ component }}
      ansible.builtin.dnf:
       name: rabbitmq-server
       state: present
