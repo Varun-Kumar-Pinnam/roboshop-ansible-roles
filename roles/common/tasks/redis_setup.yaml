@@ -1,10 +1,10 @@
-    - name: disable {{ component }} module
-      ansible.builtin.command: dnf module disable {{ component }} -y
+    - name: disable redis module
+      ansible.builtin.command: dnf module disable redis -y
 
-    - name: enable {{ component }} module 7
-      ansible.builtin.command: dnf module enable {{ component }}:7 -y
+    - name: enable redis module 7
+      ansible.builtin.command: dnf module enable redis:7 -y
 
-    - name: Install {{ component }}
+    - name: Install redis
       ansible.builtin.dnf:
-        name: {{ component }}
+        name: redis
         state: present
