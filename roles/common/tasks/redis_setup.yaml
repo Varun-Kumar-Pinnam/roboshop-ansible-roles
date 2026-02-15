@@ -1,0 +1,10 @@
+    - name: disable {{ component }} module
+      ansible.builtin.command: dnf module disable {{ component }} -y
+
+    - name: enable {{ component }} module 7
+      ansible.builtin.command: dnf module enable {{ component }}:7 -y
+
+    - name: Install {{ component }}
+      ansible.builtin.dnf:
+        name: {{ component }}
+        state: present
