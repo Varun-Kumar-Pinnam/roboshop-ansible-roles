@@ -3,7 +3,7 @@
         name: common
         tasks_from: app_setup.yaml
         apply:
-        tags:
+         tags:
         - deployment
 
     - name:  nodejs setup for {{ component }}
