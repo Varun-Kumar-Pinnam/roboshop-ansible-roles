@@ -1,6 +1,6 @@
     - name: App setup for {{ component }}
       tag:
-      - deployment
+       - deployment
       ansible.builtin.import_role:
         name: common
         tasks_from: app_setup.yaml
