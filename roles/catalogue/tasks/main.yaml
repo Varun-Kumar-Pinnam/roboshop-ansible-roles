@@ -1,10 +1,10 @@
     - name: App setup for {{ component }}
-      apply:
-      tags:
-       - deployment
       ansible.builtin.include_role:
         name: common
         tasks_from: app_setup.yaml
+      apply:
+       tags:
+       - deployment
 
     - name:  nodejs setup for {{ component }}
       ansible.builtin.import_role:
