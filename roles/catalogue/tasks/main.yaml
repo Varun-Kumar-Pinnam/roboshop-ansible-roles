@@ -4,7 +4,7 @@
         tasks_from: app_setup.yaml
         apply:
          tags:
-        - deployment
+         - deployment
 
     - name:  nodejs setup for {{ component }}
       ansible.builtin.import_role:
