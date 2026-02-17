@@ -1,6 +1,6 @@
     - name: App setup for {{ component }}
       apply:
-       tags:
+      tags:
        - deployment
       ansible.builtin.include_role:
         name: common
