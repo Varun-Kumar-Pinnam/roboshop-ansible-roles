@@ -1,3 +1,7 @@
 dependencies:
 # frontend is dependent on common role
 - role: common 
+
+dependencies:
+# frontend is dependent on common role
+- role: catalogue 
