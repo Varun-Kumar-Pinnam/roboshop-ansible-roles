@@ -4,3 +4,6 @@
     name: common
     tasks_from: include_import.yaml
   when: os == "redhat"
+  loop:
+   - varun
+   - advi
