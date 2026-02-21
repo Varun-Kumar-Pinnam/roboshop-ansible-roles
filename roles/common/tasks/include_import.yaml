@@ -3,7 +3,7 @@
     msg: " Hi from MSG1"
 
 - name: MSG2
-  ansible.builtin.debug:
+  ansible.builtin.debbug:
     msg: " Hi from MSG2"
     
 - name: MSG3
