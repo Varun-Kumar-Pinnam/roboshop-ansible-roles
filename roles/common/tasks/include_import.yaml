@@ -2,7 +2,9 @@
   ansible.builtin.debug:
     msg: " Hi from MSG1"
 
-
+- name: set fact
+  ansible.builtin.set_fact:
+   os: "debian"
 
 - name: MSG2
   ansible.builtin.debug:
