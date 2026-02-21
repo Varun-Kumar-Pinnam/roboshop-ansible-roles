@@ -7,4 +7,4 @@ hostnames:
 filters:
   # This selects only running instances with tag `Environment` tag set to `dev`.
   tag:Name: Ansible
-  instance-state-name : running
+  #instance-state-name : running
