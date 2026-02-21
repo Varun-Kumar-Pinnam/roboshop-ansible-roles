@@ -7,4 +7,8 @@ hostnames:
 filters:
   # This selects only running instances with tag `Environment` tag set to `dev`.
   tag:Name: Ansible
-  #instance-state-name : running
+  instance-state-name : running
+keyed_groups:
+  # add hosts to tag_Name_value groups for each aws_ec2 host's tags.Name variable.
+  - key: tags.Name
+    separator: ""
